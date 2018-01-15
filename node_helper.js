@@ -50,6 +50,7 @@ module.exports = NodeHelper.create({
 
     if(config.mode !== 'send') {
       client.subscribe(config.topic);
+      client.subscribe('alarm/set');
 
       client.on('message', function(topic, message) {
         self.sendSocketNotification('MQTT_DATA_RECEIVER', {'topic':topic, 'data':message.toString()});
