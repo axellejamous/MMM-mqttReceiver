@@ -65,6 +65,12 @@ Module.register('MMM-mqttReceiver', {
       this.updateDom();
     }
 
+    // SET ALARM
+    if (notification === 'MQTT_DATA_RECEIVER' && payload.topic === 'alarm/set') {
+      //console.log("mode: ",this.config.mode);
+      this.sendNotification('SET_ALARM', payload.data);
+    }
+
     if (notification === 'ERROR') {
       this.sendNotification('SHOW_ALERT', payload);
     }
