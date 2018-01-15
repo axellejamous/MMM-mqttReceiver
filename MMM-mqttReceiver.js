@@ -14,7 +14,7 @@ Module.register('MMM-mqttReceiver', {
   //mqtt://test.mosquitto.org can be used as a test server
   //'mqtt://172.20.10.3' // PI = mqtt server for IOT
   defaults: {
-    mqttServer: 'mqtt://192.168.0.184', //1.10
+    mqttServer: 'mqtt://172.20.10.10', //1.10
     mode: 'receive',    
     topic: 'mm/reply', // sub topic - for pub topics look below
     interval: 300000,				
